@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 
 import { colors } from '../../styles/colors';
@@ -13,36 +13,38 @@ import {
 import logo from '../../assets/Logo_Airbnb.svg';
 
 const Navigation: React.FC = () => {
+  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+
   return (
     <Wrapper>
       <Container>
         <img src={logo} alt="Airbnb" />
 
         <NavigationContainer>
-          <button type="button">
+          <button type="button" onClick={() => setToggleMenu(!toggleMenu)}>
             <BiMenu size={32} color={colors.background} />
           </button>
-          <NavigationMenu>
+          <NavigationMenu menu={toggleMenu}>
             <li>
-              <a href="#">English (EN)</a>
+              <button type="button">English (EN)</button>
             </li>
             <li>
-              <a href="#">US$</a>
+              <button type="button">US$</button>
             </li>
             <li>
-              <a href="#">Become a host</a>
+              <button type="button">Become a host</button>
             </li>
             <li>
-              <a href="#">Create your experience</a>
+              <button type="button">Create your experience</button>
             </li>
             <li>
-              <a href="#">Help</a>
+              <button type="button">Help</button>
             </li>
             <li>
-              <a href="#">Registration</a>
+              <button type="button">Registration</button>
             </li>
             <li>
-              <a href="#">Login</a>
+              <button type="button">Login</button>
             </li>
           </NavigationMenu>
         </NavigationContainer>
