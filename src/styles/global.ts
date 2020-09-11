@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { colors } from './colors';
+
 export default createGlobalStyle`
   * {
     padding: 0;
@@ -8,12 +10,13 @@ export default createGlobalStyle`
     outline: none;
   }
 
-  body, input, button {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  }
-
   body {
     width: 100%;
+    background: ${colors.background};
+  }
+
+  body, input, button {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
   }
 
   h1 {
