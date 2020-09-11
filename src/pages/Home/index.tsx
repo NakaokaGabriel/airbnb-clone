@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Navigation />
-      <h1 style={{ zIndex: 4 }}>Hello header</h1>
+      <h1>Hello header</h1>
     </>
   );
 };
