@@ -2,8 +2,10 @@ import React from 'react';
 
 // import { Container } from './styles';
 
+import Navigation from '../../components/Navigation';
+
 const Home: React.FC = () => {
-  return <h1>hello Home</h1>;
+  return <Navigation />;
 };
 
 export default Home;
