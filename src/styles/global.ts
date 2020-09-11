@@ -20,6 +20,10 @@ export default createGlobalStyle`
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
   }
 
+  button {
+    cursor: pointer;
+  }
+
   h1 {
     font-weight: bold;
   }
