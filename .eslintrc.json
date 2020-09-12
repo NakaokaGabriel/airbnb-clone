@@ -36,6 +36,12 @@
     "import/prefer-default-export": "off",
     "no-use-before-define": "off",
     "arrow-body-style": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/label-has-for": [ 2, {
+      "required": {
+          "some": [ "nesting", "id" ]
+      }
+    }],
     "import/extensions": [
       "error",
       "ignorePackages",
