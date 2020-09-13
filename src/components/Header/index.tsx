@@ -17,7 +17,6 @@ const Header: React.FC = () => {
           type="button"
           className="form-input"
           onClick={toggleSearchMenuVisibility}
-          onKeyDown={toggleSearchMenuVisibility}
         >
           <input
             type="text"
