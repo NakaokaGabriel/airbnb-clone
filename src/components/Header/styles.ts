@@ -7,7 +7,7 @@ interface SearchProps {
 }
 
 export const Container = styled.div`
-  padding: 10px 10px;
+  padding: 10px 0;
 `;
 
 export const Search = styled.div`
