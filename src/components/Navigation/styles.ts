@@ -20,12 +20,28 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1440px) {
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 5px 60px;
+  }
 `;
 
 export const NavigationContainer = styled.div`
   > button {
     border: none;
     background: transparent;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -41,6 +57,14 @@ export const NavigationMenu = styled.ul<Props>`
   padding: 10px 0;
   z-index: -1;
 
+  @media screen and (min-width: 768px) {
+    position: unset;
+    transform: unset;
+
+    display: flex;
+    align-items: center;
+  }
+
   > li button {
     display: block;
     width: 100%;
@@ -49,5 +73,23 @@ export const NavigationMenu = styled.ul<Props>`
     color: ${colors.background};
     border: none;
     background: none;
+
+    @media screen and (min-width: 768px) {
+      font-weight: bold;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    li + li {
+      margin-left: 20px;
+    }
   }
 `;

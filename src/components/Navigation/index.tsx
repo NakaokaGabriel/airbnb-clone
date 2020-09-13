@@ -26,22 +26,13 @@ const Navigation: React.FC = () => {
           </button>
           <NavigationMenu menu={toggleMenu}>
             <li>
-              <button type="button">English (EN)</button>
+              <button type="button">Torne-se um anfitrião</button>
             </li>
             <li>
-              <button type="button">US$</button>
+              <button type="button">Crie sua expêriencia</button>
             </li>
             <li>
-              <button type="button">Become a host</button>
-            </li>
-            <li>
-              <button type="button">Create your experience</button>
-            </li>
-            <li>
-              <button type="button">Help</button>
-            </li>
-            <li>
-              <button type="button">Registration</button>
+              <button type="button">Cadastrar</button>
             </li>
             <li>
               <button type="button">Login</button>
