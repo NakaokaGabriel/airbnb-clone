@@ -11,8 +11,9 @@ export const Container = styled.div`
 `;
 
 export const Search = styled.div`
-  background: #fff;
   border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 
   > .form-input {
     background: #fff;
@@ -22,6 +23,7 @@ export const Search = styled.div`
     border: none;
     border-radius: 4px;
     width: 100%;
+    z-index: 9;
 
     > input {
       cursor: pointer;
@@ -58,8 +60,14 @@ export const Search = styled.div`
 `;
 
 export const Form = styled.form<SearchProps>`
-  display: ${(props) => (props.searchMenu ? '' : 'none')};
   padding: 10px 20px;
+  background: #fff;
+  width: 100%;
+  position: relative;
+  transform: ${(props) => props.searchMenu ? 'translateY(0)' : 'translateY(-100%)'};
+  border-radius: 4px;
+
+  transition: transform 0.2s;
 
   .form-input {
     position: relative;
