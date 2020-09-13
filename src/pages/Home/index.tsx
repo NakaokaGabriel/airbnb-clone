@@ -1,16 +1,17 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import Container from '../../components/Container';
 
 import Navigation from '../../components/Navigation';
-import Header from './Header';
+import Header from '../../components/Header';
 
 const Home: React.FC = () => {
   return (
     <>
       <Navigation />
-      <Header />
-      <h1>Hello header</h1>
+      <Container>
+        <Header />
+      </Container>
     </>
   );
 };
