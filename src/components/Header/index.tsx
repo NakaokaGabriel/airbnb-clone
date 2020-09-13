@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import { Container, Search } from './styles';
+import { Container, Search, Form } from './styles';
 
 const Header: React.FC = () => {
+  const [toggleSearchMenu, setToggleSearchMenu] = useState<boolean>(false);
+
+  const toggleSearchMenuVisibility = useCallback(() => {
+    setToggleSearchMenu(!toggleSearchMenu);
+  }, [toggleSearchMenu]);
+
   return (
     <Container>
       <Search>
-        <form>
+        <button
+          type="button"
+          className="form-input"
+          onClick={toggleSearchMenuVisibility}
+          onKeyDown={toggleSearchMenuVisibility}
+        >
+          <input
+            type="text"
+            id="search"
+            autoComplete="off"
+            placeholder="Comece sua busca"
+            readOnly
+          />
+          <div>
+            <AiOutlineSearch color="#FFF" size={20} />
+          </div>
+        </button>
+
+        <Form searchMenu={toggleSearchMenu}>
           <div className="form-input">
             <label htmlFor="localization">
               LOCALIZAÇÃO
@@ -44,10 +68,13 @@ const Header: React.FC = () => {
             </label>
           </div>
 
-          <button type="submit">
-            <AiOutlineSearch color="#FFF" />
-          </button>
-        </form>
+          <div className="form-input">
+            <button type="submit">
+              <AiOutlineSearch color="#FFF" size={20} />
+              BUSCAR
+            </button>
+          </div>
+        </Form>
       </Search>
     </Container>
   );
