@@ -11,6 +11,7 @@ const Home: React.FC = () => {
       <Navigation />
       <Container>
         <Header />
+        <h1>hello world</h1>
       </Container>
     </>
   );
