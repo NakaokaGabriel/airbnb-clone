@@ -60,14 +60,11 @@ export const Search = styled.div`
 `;
 
 export const Form = styled.form<SearchProps>`
+  display: ${(props) => (props.searchMenu ? 'block' : 'none')};
   padding: 10px 20px;
   background: #fff;
   width: 100%;
-  position: relative;
-  transform: ${(props) => props.searchMenu ? 'translateY(0)' : 'translateY(-100%)'};
-  border-radius: 4px;
-
-  transition: transform 0.2s;
+  border-radius: 0 0 4px 4px;
 
   .form-input {
     position: relative;
