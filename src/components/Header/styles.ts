@@ -8,6 +8,10 @@ interface SearchProps {
 
 export const Container = styled.div`
   padding: 10px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 0;
+  }
 `;
 
 export const Search = styled.div`
@@ -24,6 +28,10 @@ export const Search = styled.div`
     border-radius: 4px;
     width: 100%;
     z-index: 9;
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
 
     > input {
       cursor: pointer;
@@ -66,9 +74,24 @@ export const Form = styled.form<SearchProps>`
   width: 100%;
   border-radius: 0 0 4px 4px;
 
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 10px 0;
+  }
+
   .form-input {
     position: relative;
     width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      flex: 1;
+
+      &:last-child {
+        flex: 0;
+      }
+    }
 
     > label {
       cursor: text;
@@ -82,6 +105,12 @@ export const Form = styled.form<SearchProps>`
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+
+      @media screen and (min-width: 1024px) {
+        height: 50px;
+        padding: 8px 10px 4px 10px;
+        font-size: 12px;
+      }
 
       input {
         display: block;
@@ -103,14 +132,37 @@ export const Form = styled.form<SearchProps>`
       color: #fff;
       font-weight: bold;
 
+      @media screen and (min-width: 1024px) {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1000px;
+      }
+
       svg {
         vertical-align: middle;
         margin-right: 10px;
+
+        @media screen and (min-width: 1024px) {
+          margin-right: 0;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        span {
+          display: none;
+        }
       }
     }
 
     & + div {
       margin-top: 20px;
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 0;
+        margin-left: 10px;
+      }
     }
   }
 `;
