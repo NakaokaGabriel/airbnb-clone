@@ -70,7 +70,7 @@ const Header: React.FC = () => {
           <div className="form-input">
             <button type="submit">
               <AiOutlineSearch color="#FFF" size={20} />
-              BUSCAR
+              <span>BUSCAR</span>
             </button>
           </div>
         </Form>
