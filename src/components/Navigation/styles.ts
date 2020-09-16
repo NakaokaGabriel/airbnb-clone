@@ -75,7 +75,7 @@ export const NavigationMenu = styled.ul<Props>`
     background: none;
 
     @media screen and (min-width: 768px) {
-      font-weight: bold;
+      font-weight: 300;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1024px) {
