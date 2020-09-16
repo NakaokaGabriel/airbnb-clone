@@ -6,7 +6,7 @@ import Container from '../../components/Container';
 import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
 
-import { Introduce, Background } from './styles';
+import { Introduce, Background, IntroduceContent } from './styles';
 
 const Home: React.FC = () => {
   return (
@@ -17,13 +17,17 @@ const Home: React.FC = () => {
 
         <Introduce>
           <Background>
-            <h1>Um mundo inteiro perto de você</h1>
-            <p>
-              Faça uma viagem diferente e descubra as maravilhas perto de você.
-            </p>
-            <button type="button">
-              Explore os arredores <RiArrowRightSLine size={28} color="#fff" />
-            </button>
+            <IntroduceContent>
+              <h1>Um mundo inteiro perto de você</h1>
+              <p>
+                Faça uma viagem diferente e descubra as maravilhas perto de
+                você.
+              </p>
+              <button type="button">
+                Explore os arredores
+                <RiArrowRightSLine size={28} color="#fff" />
+              </button>
+            </IntroduceContent>
           </Background>
         </Introduce>
       </Container>

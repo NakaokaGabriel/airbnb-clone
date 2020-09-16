@@ -12,21 +12,42 @@ export const Background = styled.div`
   background-size: cover;
   padding: 20px 10px;
 
+  @media screen and (min-width: 768px) {
+    height: 300px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const IntroduceContent = styled.div`
   h1,
   p,
   button {
     color: #ffffff;
     max-width: 300px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 400px;
+    }
   }
 
   h1 {
     font-size: 28px;
     font-weight: 300;
+
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+    }
   }
 
   p {
     margin: 20px 0;
     font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   button {
@@ -34,6 +55,20 @@ export const Background = styled.div`
     border: none;
     font-size: 14px;
     font-weight: bold;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+
+      svg {
+        transition: margin-left 0.1s;
+      }
+
+      &:hover {
+        svg {
+          margin-left: 10px;
+        }
+      }
+    }
 
     svg {
       vertical-align: middle;
