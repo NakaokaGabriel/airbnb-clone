@@ -75,3 +75,9 @@ export const IntroduceContent = styled.div`
     }
   }
 `;
+
+export const Explorer = styled.div``;
+
+export const ExploreContent = styled.div``;
+
+export const ExploreCard = styled.button``;
