@@ -39,4 +39,9 @@ export default createGlobalStyle`
   img {
     max-width: 100%;
   }
+
+  h2 {
+    font-size: 24px;
+    color: ${colors.darkGrey};
+  }
 `;

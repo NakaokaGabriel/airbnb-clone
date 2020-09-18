@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '../../styles/colors';
+
 import background from '../../assets/HERO_BG.jpg';
 
 export const Introduce = styled.div`
@@ -76,8 +78,37 @@ export const IntroduceContent = styled.div`
   }
 `;
 
-export const Explorer = styled.div``;
+export const Explorer = styled.div`
+  margin-top: 25px;
+
+  h2 {
+    margin-bottom: 15px;
+  }
+`;
 
 export const ExploreContent = styled.div``;
 
-export const ExploreCard = styled.button``;
+export const ExploreCard = styled.button`
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  & + button {
+    margin-top: 20px;
+  }
+
+  h4 {
+    color: ${colors.darkGrey};
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+`;
