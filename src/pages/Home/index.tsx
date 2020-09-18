@@ -62,13 +62,13 @@ const Home: React.FC = () => {
         </Introduce>
 
         <Explorer>
-          <h1>Explore airbnb</h1>
+          <h2>Explore airbnb</h2>
 
           <ExploreContent>
             {explorations.map((explore) => (
               <ExploreCard key={explore.name}>
                 <img src={explore.image} alt={explore.name} />
-                <p>{explore.name}</p>
+                <h4>{explore.name}</h4>
               </ExploreCard>
             ))}
           </ExploreContent>
