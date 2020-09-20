@@ -39,6 +39,14 @@ export const Container = styled(Link)<CardProps>`
           color: ${colors.darkGrey};
           font-size: 16px;
         }
+
+        .stars {
+          color: ${colors.green};
+
+          svg {
+            margin-left: 2px;
+          }
+        }
       }
     `}
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RiArrowRightSLine } from 'react-icons/ri';
+import { RiArrowRightSLine, RiStarFill } from 'react-icons/ri';
 
 import Container from '../../components/Container';
 
@@ -15,6 +15,8 @@ import {
   Explorer,
   ExploreContent,
   ExploreCard,
+  Adventure,
+  AdventureContent,
 } from './styles';
 
 interface ExplorationArray {
@@ -76,20 +78,100 @@ const Home: React.FC = () => {
           </ExploreContent>
         </Explorer>
 
-        <Card type="mini" to="/">
-          <img
-            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-            alt="imagem bonita"
-          />
+        <Adventure>
+          <h2>Descubra as aventuras do Airbnb</h2>
+          <p>
+            Viagens de vários dias organizadas por especialistas locais com
+            atividades, refeições e alojamento incluídos
+          </p>
 
-          <div>
-            <span>Cayman Islands</span>
-            <h4>2 Nights PACKAGE All Inclusive</h4>
-            <p>À partir de 577€/personne - 3 jours</p>
+          <AdventureContent>
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
 
-            <span className="stars">5.0 stars</span>
-          </div>
-        </Card>
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
+
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
+
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
+
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
+
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
+
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
+
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
+
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
+
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
+          </AdventureContent>
+        </Adventure>
 
         <Card type="medium" to="/">
           <img
