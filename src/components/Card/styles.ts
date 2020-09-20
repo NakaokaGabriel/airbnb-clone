@@ -10,9 +10,11 @@ export const Container = styled(Link)<CardProps>`
   display: block;
   text-decoration: none;
 
-  ${(props) => props.type === 'mini'
-    && css`
-      max-width: 200px;
+  ${(props) =>
+    props.type === 'mini' &&
+    css`
+      max-width: 190px;
+      width: 190px;
 
       > img {
         height: 240px;
@@ -41,7 +43,9 @@ export const Container = styled(Link)<CardProps>`
         }
 
         .stars {
+          display: block;
           color: ${colors.green};
+          margin-top: 5px;
 
           svg {
             margin-left: 2px;
@@ -50,8 +54,9 @@ export const Container = styled(Link)<CardProps>`
       }
     `}
 
-  ${(props) => props.type === 'medium'
-    && css`
+  ${(props) =>
+    props.type === 'medium' &&
+    css`
       max-width: 320px;
 
       > img {
@@ -97,8 +102,9 @@ export const Container = styled(Link)<CardProps>`
       }
     `}
 
-  ${(props) => props.type === 'large'
-    && css`
+  ${(props) =>
+    props.type === 'large' &&
+    css`
       max-width: 400px;
 
       > img {
