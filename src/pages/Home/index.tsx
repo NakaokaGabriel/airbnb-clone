@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           </ExploreContent>
         </Explorer>
 
-        <Card type="mini">
+        <Card type="mini" to="/">
           <img
             src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
             alt="imagem bonita"
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
           </div>
         </Card>
 
-        <Card type="medium">
+        <Card type="medium" to="/">
           <img
             src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
             alt="imagem bonita"
@@ -104,9 +104,11 @@ const Home: React.FC = () => {
             </div>
             <span className="stars">5.0 stars</span>
           </div>
+
+          <p>À partir de 577€/personne - 3 jours</p>
         </Card>
 
-        <Card type="large">
+        <Card type="large" to="/">
           <img
             src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
             alt="imagem bonita"
