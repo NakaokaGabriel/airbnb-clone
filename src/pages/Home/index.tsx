@@ -170,6 +170,40 @@ const Home: React.FC = () => {
                 </span>
               </div>
             </Card>
+
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
+
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
+
+            <Card type="mini" to="/">
+              <img
+                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                alt="imagem bonita"
+              />
+
+              <div>
+                <span>Cayman Islands</span>
+                <h4>2 Nights PACKAGE All Inclusive</h4>
+                <p>À partir de 577€/personne - 3 jours</p>
+
+                <span className="stars">
+                  5.0 <RiStarFill />
+                </span>
+              </div>
+            </Card>
           </AdventureContent>
         </Adventure>
 
