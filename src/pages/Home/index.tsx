@@ -6,6 +6,8 @@ import Container from '../../components/Container';
 import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
 
+import Card from '../../components/Card';
+
 import {
   Introduce,
   Background,
@@ -73,6 +75,46 @@ const Home: React.FC = () => {
             ))}
           </ExploreContent>
         </Explorer>
+
+        <Card type="mini">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div>
+            <span>Cayman Islands</span>
+            <h4>2 Nights PACKAGE All Inclusive</h4>
+            <p>À partir de 577€/personne - 3 jours</p>
+
+            <span className="stars">5.0 stars</span>
+          </div>
+        </Card>
+
+        <Card type="medium">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+            <span className="stars">5.0 stars</span>
+          </div>
+        </Card>
+
+        <Card type="large">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <h5>Plus de 200 séjours vérifiés</h5>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
       </Container>
     </>
   );
