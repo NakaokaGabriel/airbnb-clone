@@ -4,7 +4,7 @@ import { colors } from '../../styles/colors';
 
 import background from '../../assets/HERO_BG.jpg';
 
-export const Introduce = styled.div`
+export const Introduce = styled.section`
   margin: 10px 0;
 `;
 
@@ -78,7 +78,7 @@ export const IntroduceContent = styled.div`
   }
 `;
 
-export const Explorer = styled.div`
+export const Explorer = styled.section`
   margin-top: 25px;
 
   @media screen and (min-width: 768px) {
@@ -126,3 +126,7 @@ export const ExploreCard = styled.button`
     height: 100px;
   }
 `;
+
+export const Adventure = styled.section``;
+
+export const AdventureContent = styled.div``;
