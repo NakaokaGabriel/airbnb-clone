@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { RiArrowRightSLine, RiStarFill } from 'react-icons/ri';
+import Slider, { Settings } from 'react-slick';
+
+// Slick carousel css styles
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import Container from '../../components/Container';
 
@@ -42,6 +47,49 @@ const Home: React.FC = () => {
       name: 'Aventuras',
     },
   ]);
+
+  const customSlider = useRef<Slider>(null);
+
+  const reactSlickSettings = {
+    infinite: true,
+    slidesToShow: 7,
+    dots: true,
+    draggable: false,
+    rows: 1,
+    responsive: [
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+    ],
+  } as Settings;
 
   return (
     <>
@@ -86,128 +134,82 @@ const Home: React.FC = () => {
           </p>
 
           <AdventureContent>
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
+            <Slider {...reactSlickSettings} ref={customSlider}>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
 
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
 
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
 
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
 
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
 
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
 
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
 
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
 
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
-
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
-
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
-
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
-
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
-
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
-
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
-
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
-
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
-
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
-
-            <Card type="mini" to="/">
-              <img
-                src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-                alt="imagem bonita"
-              />
-
-              <div>
-                <span>Cayman Islands</span>
-                <h4>2 Nights PACKAGE All Inclusive</h4>
-                <p>À partir de 577€/personne - 3 jours</p>
-
-                <span className="stars">
-                  5.0 <RiStarFill />
-                </span>
-              </div>
-            </Card>
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+            </Slider>
           </AdventureContent>
+          <button
+            type="button"
+            onClick={() => customSlider.current?.slickPrev()}
+          >
+            previous
+          </button>
         </Adventure>
 
-        <Card type="medium" to="/">
+        {/* <Card type="medium" to="/">
           <img
             src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
             alt="imagem bonita"
@@ -232,7 +234,7 @@ const Home: React.FC = () => {
 
           <h5>Plus de 200 séjours vérifiés</h5>
           <p>À partir de 577€/personne - 3 jours</p>
-        </Card>
+        </Card> */}
       </Container>
     </>
   );
