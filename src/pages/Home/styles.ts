@@ -129,7 +129,6 @@ export const ExploreCard = styled.button`
 
 export const Adventure = styled.section`
   margin: 40px 0;
-  overflow-x: scroll;
 
   p {
     font-size: 12px;
@@ -143,4 +142,6 @@ export const Adventure = styled.section`
   }
 `;
 
-export const AdventureContent = styled.div``;
+export const AdventureContent = styled.div`
+  overflow: hidden;
+`;
