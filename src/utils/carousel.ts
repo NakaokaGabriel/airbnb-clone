@@ -1,9 +1,9 @@
 import { Settings } from 'react-slick';
 
 export const reactSlickSettings = {
-  infinite: true,
+  infinite: false,
   slidesToShow: 7,
-  dots: true,
+  dots: false,
   draggable: false,
   rows: 1,
   responsive: [
@@ -35,7 +35,7 @@ export const reactSlickSettings = {
     {
       breakpoint: 1440,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 6,
       },
     },
   ],
