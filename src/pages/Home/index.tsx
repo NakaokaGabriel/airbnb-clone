@@ -1,6 +1,11 @@
 import React, { useState, useRef } from 'react';
-import { RiArrowRightSLine, RiStarFill } from 'react-icons/ri';
-import Slider, { Settings } from 'react-slick';
+import {
+  RiArrowRightSLine,
+  RiStarFill,
+  RiArrowDropLeftLine,
+  RiArrowDropRightLine,
+} from 'react-icons/ri';
+import Slider from 'react-slick';
 
 // Slick carousel css styles
 import 'slick-carousel/slick/slick.css';
@@ -13,6 +18,8 @@ import Header from '../../components/Header';
 
 import Card from '../../components/Card';
 
+import { reactSlickSettings } from '../../utils/carousel';
+
 import {
   Introduce,
   Background,
@@ -22,6 +29,7 @@ import {
   ExploreCard,
   Adventure,
   AdventureContent,
+  SlideButton,
 } from './styles';
 
 interface ExplorationArray {
@@ -47,49 +55,9 @@ const Home: React.FC = () => {
       name: 'Aventuras',
     },
   ]);
+  const [adventureFocus, setAdventureFocus] = useState<boolean>(false);
 
   const customSlider = useRef<Slider>(null);
-
-  const reactSlickSettings = {
-    infinite: true,
-    slidesToShow: 7,
-    dots: true,
-    draggable: false,
-    rows: 1,
-    responsive: [
-      {
-        breakpoint: 380,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 580,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-    ],
-  } as Settings;
 
   return (
     <>
@@ -133,7 +101,10 @@ const Home: React.FC = () => {
             atividades, refeições e alojamento incluídos
           </p>
 
-          <AdventureContent>
+          <AdventureContent
+            onMouseOver={() => setAdventureFocus(true)}
+            onMouseOut={() => setAdventureFocus(false)}
+          >
             <Slider {...reactSlickSettings} ref={customSlider}>
               <Card type="mini" to="/">
                 <img
@@ -199,42 +170,120 @@ const Home: React.FC = () => {
                   </span>
                 </div>
               </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
+
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
+
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
+
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
+
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
+
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
+
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
+
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
+
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
+
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
+
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
+              <Card type="mini" to="/">
+                <img
+                  src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+                  alt="imagem bonita"
+                />
+
+                <div>
+                  <span>Cayman Islands</span>
+                  <h4>2 Nights PACKAGE All Inclusive</h4>
+                  <p>À partir de 577€/personne - 3 jours</p>
+
+                  <span className="stars">
+                    5.0 <RiStarFill />
+                  </span>
+                </div>
+              </Card>
             </Slider>
+            <SlideButton focus={adventureFocus}>
+              <button
+                type="button"
+                onClick={() => customSlider.current?.slickPrev()}
+              >
+                <RiArrowDropLeftLine size={40} />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => customSlider.current?.slickNext()}
+              >
+                <RiArrowDropRightLine size={40} />
+              </button>
+            </SlideButton>
           </AdventureContent>
-          <button
-            type="button"
-            onClick={() => customSlider.current?.slickPrev()}
-          >
-            previous
-          </button>
         </Adventure>
-
-        {/* <Card type="medium" to="/">
-          <img
-            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-            alt="imagem bonita"
-          />
-
-          <div className="content">
-            <div>
-              <strong>superhost</strong>
-              <span>Toledo</span>
-            </div>
-            <span className="stars">5.0 stars</span>
-          </div>
-
-          <p>À partir de 577€/personne - 3 jours</p>
-        </Card>
-
-        <Card type="large" to="/">
-          <img
-            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
-            alt="imagem bonita"
-          />
-
-          <h5>Plus de 200 séjours vérifiés</h5>
-          <p>À partir de 577€/personne - 3 jours</p>
-        </Card> */}
       </Container>
     </>
   );
