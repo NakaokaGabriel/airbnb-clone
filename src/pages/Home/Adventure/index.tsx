@@ -14,7 +14,7 @@ import { Container, AdventureContent, SlideButton } from './styles';
 
 import Card from '../../../components/Card';
 
-import { reactSlickSettings } from '../../../utils/carousel';
+import { reactSlickSettings } from '../../../config/carouselConfig';
 
 const Adventure: React.FC = () => {
   const customSlider = useRef<Slider>(null);
