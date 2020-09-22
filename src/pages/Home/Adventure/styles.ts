@@ -24,6 +24,10 @@ export const Container = styled.section`
 export const AdventureContent = styled.div`
   overflow: hidden;
   position: relative;
+
+  .slick-track {
+    margin: 0;
+  }
 `;
 
 export const SlideButton = styled.div<AdventureFocusProps>`

@@ -13,8 +13,8 @@ export const Container = styled(Link)<CardProps>`
   ${(props) =>
     props.type === 'mini' &&
     css`
-      max-width: 190px;
-      width: 190px;
+      width: 100%;
+      padding: 0 5px;
 
       > img {
         height: 240px;

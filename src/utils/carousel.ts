@@ -2,28 +2,15 @@ import { Settings } from 'react-slick';
 
 export const reactSlickSettings = {
   infinite: false,
-  slidesToShow: 7,
+  slidesToShow: 6,
   dots: false,
   draggable: false,
   rows: 1,
   responsive: [
     {
-      breakpoint: 468,
+      breakpoint: 1440,
       settings: {
-        slidesToShow: 1,
-        centerMode: true,
-      },
-    },
-    {
-      breakpoint: 628,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 968,
-      settings: {
-        slidesToShow: 3,
+        slidesToShow: 5,
       },
     },
     {
@@ -33,15 +20,21 @@ export const reactSlickSettings = {
       },
     },
     {
-      breakpoint: 1220,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 3,
       },
     },
     {
-      breakpoint: 1440,
+      breakpoint: 568,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 368,
+      settings: {
+        slidesToShow: 1,
       },
     },
   ],
