@@ -8,20 +8,20 @@ export const reactSlickSettings = {
   rows: 1,
   responsive: [
     {
-      breakpoint: 380,
+      breakpoint: 468,
       settings: {
         slidesToShow: 1,
         centerMode: true,
       },
     },
     {
-      breakpoint: 580,
+      breakpoint: 628,
       settings: {
         slidesToShow: 2,
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 968,
       settings: {
         slidesToShow: 3,
       },
@@ -30,6 +30,12 @@ export const reactSlickSettings = {
       breakpoint: 1024,
       settings: {
         slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 1220,
+      settings: {
+        slidesToShow: 5,
       },
     },
     {
