@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import {
   RiStarFill,
   RiArrowDropLeftLine,
@@ -20,6 +20,14 @@ const Adventure: React.FC = () => {
   const customSlider = useRef<Slider>(null);
   const [adventureFocus, setAdventureFocus] = useState<boolean>(false);
 
+  const toggleMouseOver = useCallback(() => {
+    setAdventureFocus(true);
+  }, []);
+
+  const toggleMouseOut = useCallback(() => {
+    setAdventureFocus(false);
+  }, []);
+
   return (
     <Container>
       <h2>Descubra as aventuras do Airbnb</h2>
@@ -29,8 +37,8 @@ const Adventure: React.FC = () => {
       </p>
 
       <AdventureContent
-        onMouseOver={() => setAdventureFocus(true)}
-        onMouseOut={() => setAdventureFocus(false)}
+        onMouseOver={toggleMouseOver}
+        onMouseOut={toggleMouseOut}
       >
         <Slider {...reactSlickSettings} ref={customSlider}>
           <Card type="mini" to="/cayman">
