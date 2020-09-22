@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 
 import Explore from './Explore';
 import Adventure from './Adventure';
+import Accommodation from './Accommodation';
 
 import { Introduce, Background, IntroduceContent } from './styles';
 
@@ -35,8 +36,8 @@ const Home: React.FC = () => {
         </Introduce>
 
         <Explore />
-
         <Adventure />
+        <Accommodation />
       </Container>
     </>
   );
