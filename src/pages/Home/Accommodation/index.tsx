@@ -29,6 +29,132 @@ const Accommodation: React.FC = () => {
           </div>
           <p>À partir de 577€/personne - 3 jours</p>
         </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
+        <Card type="medium" to="/">
+          <img
+            src="https://cdn.theatlantic.com/assets/media/img/photo/2020/06/scenes-antarctica/a01_1725564625-1/original.jpg"
+            alt="imagem bonita"
+          />
+
+          <div className="content">
+            <div>
+              <strong>superhost</strong>
+              <span>Toledo</span>
+            </div>
+
+            <div className="stars">
+              <RiStarFill /> 4,98
+            </div>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </Card>
       </AccommodationContent>
     </Container>
   );
