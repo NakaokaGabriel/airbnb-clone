@@ -10,8 +10,9 @@ export const Container = styled(Link)<CardProps>`
   display: block;
   text-decoration: none;
 
-  ${(props) => props.type === 'mini'
-    && css`
+  ${(props) =>
+    props.type === 'mini' &&
+    css`
       width: 100%;
       padding: 0 5px;
 
@@ -53,8 +54,9 @@ export const Container = styled(Link)<CardProps>`
       }
     `}
 
-  ${(props) => props.type === 'medium'
-    && css`
+  ${(props) =>
+    props.type === 'medium' &&
+    css`
       width: 100%;
 
       > img {
@@ -107,9 +109,10 @@ export const Container = styled(Link)<CardProps>`
       }
     `}
 
-  ${(props) => props.type === 'large'
-    && css`
-      max-width: 400px;
+  ${(props) =>
+    props.type === 'large' &&
+    css`
+      width: 100%;
 
       > img {
         height: 240px;
