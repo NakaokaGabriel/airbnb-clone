@@ -10,6 +10,7 @@ import Explore from './Explore';
 import Adventure from './Adventure';
 import Accommodation from './Accommodation';
 import Experience from './Experience';
+import Destiny from './Destiny';
 
 import { Introduce, Background, IntroduceContent } from './styles';
 
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
         <Adventure />
         <Accommodation />
         <Experience />
+        <Destiny />
       </Container>
     </>
   );
