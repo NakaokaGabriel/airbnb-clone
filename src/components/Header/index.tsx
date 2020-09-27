@@ -1,5 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useLayoutEffect } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { isBefore } from 'date-fns';
 
 import { Container, Search, Form } from './styles';
 
@@ -13,6 +14,19 @@ const Header: React.FC = () => {
   const toggleSearchMenuVisibility = useCallback(() => {
     setToggleSearchMenu(!toggleSearchMenu);
   }, [toggleSearchMenu]);
+
+  useLayoutEffect(() => {
+    if (checkinDate && checkoutDate) {
+      const validateCheckout = isBefore(checkoutDate, checkinDate)
+        ? null
+        : checkoutDate;
+      setCheckoutDate(validateCheckout);
+    }
+  }, [checkinDate, checkoutDate]);
+
+  const toggleCheckoutDate = useCallback((date) => {
+    setCheckoutDate(date);
+  }, []);
 
   return (
     <Container>
@@ -65,7 +79,7 @@ const Header: React.FC = () => {
               <Calendar
                 id="checkout"
                 selected={checkoutDate}
-                onChange={(date: Date) => setCheckoutDate(date)}
+                onChange={(date: Date) => toggleCheckoutDate(date)}
                 placeholderText="Insira a data"
                 minDate={checkinDate || new Date()}
               />
