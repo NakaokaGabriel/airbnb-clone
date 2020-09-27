@@ -11,10 +11,14 @@ export const Container = styled.div`
     top: 25px;
   }
 
+  .react-datepicker__day--outside-month {
+    opacity: 0.2;
+  }
+
   .react-datepicker__navigation--previous {
     background: url(${arrowLeft}) no-repeat 45% center;
     background-size: 10px;
-    background-color: ${colors.red};
+    background-color: ${colors.darkGrey};
     width: 30px;
     height: 30px;
     border: none;
@@ -25,7 +29,7 @@ export const Container = styled.div`
   .react-datepicker__navigation--next {
     background: url(${arrowRight}) no-repeat 58% center;
     background-size: 10px;
-    background-color: ${colors.red};
+    background-color: ${colors.darkGrey};
     width: 30px;
     height: 30px;
     border: none;
@@ -49,6 +53,7 @@ export const Container = styled.div`
 
     .react-datepicker__header {
       border: none;
+      background: none;
 
       .react-datepicker__current-month {
         color: ${colors.darkGrey};
@@ -71,11 +76,19 @@ export const Container = styled.div`
         color: ${colors.middleGray};
       }
 
+      .react-datepicker__day--disabled,
+      .react-datepicker__month-text--disabled,
+      .react-datepicker__quarter-text--disabled,
+      .react-datepicker__year-text--disabled {
+        color: ${colors.red};
+        opacity: 0.1;
+      }
+
       .react-datepicker__day--keyboard-selected,
       .react-datepicker__month-text--keyboard-selected,
       .react-datepicker__quarter-text--keyboard-selected,
       .react-datepicker__year-text--keyboard-selected {
-        background: ${colors.red};
+        background: ${colors.darkGrey};
         color: #fff;
         border-radius: 50%;
       }
@@ -92,7 +105,7 @@ export const Container = styled.div`
       .react-datepicker__year-text--selected:hover,
       .react-datepicker__year-text--in-selecting-range:hover,
       .react-datepicker__year-text--in-range:hover {
-        background: ${colors.red};
+        background: ${colors.darkGrey};
         color: #fff;
         border-radius: 50%;
       }
@@ -109,7 +122,7 @@ export const Container = styled.div`
       .react-datepicker__year-text--selected:hover,
       .react-datepicker__year-text--in-selecting-range:hover,
       .react-datepicker__year-text--in-range:hover {
-        background: ${colors.red};
+        background: ${colors.darkGrey};
         color: #fff;
         border-radius: 50%;
       }
@@ -126,7 +139,7 @@ export const Container = styled.div`
       .react-datepicker__year-text--selected,
       .react-datepicker__year-text--in-selecting-range,
       .react-datepicker__year-text--in-range {
-        background: ${colors.red};
+        background: ${colors.darkGrey};
         color: #fff;
         border-radius: 50%;
       }
