@@ -8,12 +8,23 @@ import Calendar from '../Calendar';
 
 const Header: React.FC = () => {
   const [toggleSearchMenu, setToggleSearchMenu] = useState<boolean>(false);
+
   const [checkinDate, setCheckinDate] = useState<Date | null>(null);
+  const [openCheckinDate, setOpenCheckinDate] = useState<boolean>(false);
   const [checkoutDate, setCheckoutDate] = useState<Date | null>(null);
+  const [openCheckoutDate, setOpenCheckoutDate] = useState<boolean>(false);
 
   const toggleSearchMenuVisibility = useCallback(() => {
     setToggleSearchMenu(!toggleSearchMenu);
   }, [toggleSearchMenu]);
+
+  const toggleCheckinDate = useCallback((date) => {
+    setCheckinDate(date);
+  }, []);
+
+  const toggleCheckoutDate = useCallback((date) => {
+    setCheckoutDate(date);
+  }, []);
 
   useLayoutEffect(() => {
     if (checkinDate && checkoutDate) {
@@ -22,11 +33,7 @@ const Header: React.FC = () => {
         : checkoutDate;
       setCheckoutDate(validateCheckout);
     }
-  }, [checkinDate, checkoutDate]);
-
-  const toggleCheckoutDate = useCallback((date) => {
-    setCheckoutDate(date);
-  }, []);
+  }, [checkinDate, checkoutDate, openCheckoutDate]);
 
   return (
     <Container>
@@ -66,9 +73,12 @@ const Header: React.FC = () => {
               <Calendar
                 id="checkin"
                 selected={checkinDate}
-                onChange={(date: Date) => setCheckinDate(date)}
+                onChange={(date: Date) => toggleCheckinDate(date)}
                 placeholderText="Insira a data"
                 minDate={new Date()}
+                open={openCheckinDate}
+                onInputClick={() => setOpenCheckinDate(true)}
+                onClickOutside={() => setOpenCheckinDate(false)}
               />
             </label>
           </div>
@@ -82,6 +92,9 @@ const Header: React.FC = () => {
                 onChange={(date: Date) => toggleCheckoutDate(date)}
                 placeholderText="Insira a data"
                 minDate={checkinDate || new Date()}
+                open={openCheckoutDate}
+                onInputClick={() => setOpenCheckoutDate(true)}
+                onClickOutside={() => setOpenCheckoutDate(false)}
               />
             </label>
           </div>
