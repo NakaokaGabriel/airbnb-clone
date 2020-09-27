@@ -3,8 +3,12 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 import { Container, Search, Form } from './styles';
 
+import Calendar from '../Calendar';
+
 const Header: React.FC = () => {
   const [toggleSearchMenu, setToggleSearchMenu] = useState<boolean>(false);
+  const [checkinDate, setCheckinDate] = useState<Date | null>(null);
+  const [checkoutDate, setCheckoutDate] = useState<Date | null>(null);
 
   const toggleSearchMenuVisibility = useCallback(() => {
     setToggleSearchMenu(!toggleSearchMenu);
@@ -30,7 +34,7 @@ const Header: React.FC = () => {
           </div>
         </button>
 
-        <Form searchMenu={toggleSearchMenu}>
+        <Form searchMenu={toggleSearchMenu} autoComplete="off">
           <div className="form-input">
             <label htmlFor="localization">
               LOCALIZAÇÃO
@@ -45,14 +49,24 @@ const Header: React.FC = () => {
           <div className="form-input">
             <label htmlFor="checkin">
               CHECK-IN
-              <input type="text" id="checkin" placeholder="Insira as datas" />
+              <Calendar
+                selected={checkinDate}
+                onChange={(date: Date) => setCheckinDate(date)}
+                placeholderText="Insira a data"
+                id="checkin"
+              />
             </label>
           </div>
 
           <div className="form-input">
             <label htmlFor="checkout">
               CHECKOUT
-              <input type="text" id="checkout" placeholder="Insira as datas" />
+              <Calendar
+                selected={checkoutDate}
+                onChange={(date: Date) => setCheckoutDate(date)}
+                placeholderText="Insira a data"
+                id="checkout"
+              />
             </label>
           </div>
 

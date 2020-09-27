@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Search = styled.div`
   border-radius: 4px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   > .form-input {
     background: #fff;

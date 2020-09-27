@@ -1,5 +1,4 @@
 import React from 'react';
-import { RiStarFill } from 'react-icons/ri';
 
 import { Container, DestinyContent } from './styles';
 
