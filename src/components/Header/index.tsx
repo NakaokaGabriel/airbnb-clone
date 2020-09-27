@@ -50,10 +50,11 @@ const Header: React.FC = () => {
             <label htmlFor="checkin">
               CHECK-IN
               <Calendar
+                id="checkin"
                 selected={checkinDate}
                 onChange={(date: Date) => setCheckinDate(date)}
                 placeholderText="Insira a data"
-                id="checkin"
+                minDate={new Date()}
               />
             </label>
           </div>
@@ -62,10 +63,11 @@ const Header: React.FC = () => {
             <label htmlFor="checkout">
               CHECKOUT
               <Calendar
+                id="checkout"
                 selected={checkoutDate}
                 onChange={(date: Date) => setCheckoutDate(date)}
                 placeholderText="Insira a data"
-                id="checkout"
+                minDate={checkinDate || new Date()}
               />
             </label>
           </div>
