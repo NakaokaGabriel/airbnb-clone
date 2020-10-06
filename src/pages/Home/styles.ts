@@ -23,7 +23,7 @@ export const Background = styled.div`
 export const IntroduceContent = styled.div`
   h1,
   p,
-  button {
+  a {
     color: #ffffff;
     max-width: 300px;
 
@@ -50,7 +50,7 @@ export const IntroduceContent = styled.div`
     }
   }
 
-  button {
+  a {
     background: none;
     border: none;
     font-size: 14px;

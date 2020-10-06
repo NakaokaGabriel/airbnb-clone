@@ -32,7 +32,7 @@ const Explore: React.FC = () => {
 
       <ExploreContent>
         {explorations.map((explore) => (
-          <ExploreCard key={explore.name}>
+          <ExploreCard to="/remain" key={explore.name}>
             <img src={explore.image} alt={explore.name} />
             <h4>{explore.name}</h4>
           </ExploreCard>
