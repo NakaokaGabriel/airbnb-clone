@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { colors } from '../../../styles/colors';
 
@@ -21,7 +22,7 @@ export const ExploreContent = styled.div`
   }
 `;
 
-export const ExploreCard = styled.button`
+export const ExploreCard = styled(Link)`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 12px;
   width: 100%;
@@ -30,7 +31,7 @@ export const ExploreCard = styled.button`
   align-items: center;
   overflow: hidden;
 
-  & + button {
+  & + a {
     margin-top: 20px;
 
     @media screen and (min-width: 768px) {

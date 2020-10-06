@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 import Container from '../../components/Container';
 
@@ -29,10 +30,10 @@ const Home: React.FC = () => {
                 Faça uma viagem diferente e descubra as maravilhas perto de
                 você.
               </p>
-              <button type="button">
+              <Link to="/remain">
                 Explore os arredores
                 <RiArrowRightSLine size={28} color="#fff" />
-              </button>
+              </Link>
             </IntroduceContent>
           </Background>
         </Introduce>
