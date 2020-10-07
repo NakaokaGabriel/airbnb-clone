@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 import { colors } from '../../styles/colors';
 
@@ -18,7 +19,9 @@ const Navigation: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <img src={logo} alt="Airbnb" />
+        <Link to="/">
+          <img src={logo} alt="Airbnb" />
+        </Link>
 
         <NavigationContainer>
           <button type="button" onClick={() => setToggleMenu(!toggleMenu)}>
