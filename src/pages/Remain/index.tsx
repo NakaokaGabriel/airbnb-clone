@@ -7,6 +7,7 @@ import Container from '../../components/Container';
 import Header from '../../components/Header';
 
 import Accommodation from './Accommodation';
+import Destiny from './Destiny';
 
 const Remain: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Remain: React.FC = () => {
 
           <Accommodation title="São Paulo" />
           <Accommodation title="Rio de Janeiro" />
+          <Destiny />
         </Content>
       </Container>
     </>
