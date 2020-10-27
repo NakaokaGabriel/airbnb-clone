@@ -28,8 +28,10 @@ const Room: React.FC = () => {
         <Content>
           <Title>
             <h1>Bangalô próx. da ciclovia e praias</h1>
+
             <div className="stars">
-              <RiStarFill /> 4,98 (4) - Ilhabela, São Paulo, Brasil
+              <RiStarFill /> <strong>4,98</strong> (4) - Ilhabela, São Paulo,
+              Brasil
             </div>
           </Title>
           <RowContent>
