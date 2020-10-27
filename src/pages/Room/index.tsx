@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { RiGridFill, RiStarFill } from 'react-icons/ri';
 
 import Navigation from '../../components/Navigation';

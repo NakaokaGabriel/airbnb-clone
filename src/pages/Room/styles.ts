@@ -64,7 +64,11 @@ export const RowContent = styled.div`
   }
 `;
 
-export const MainContent = styled.div``;
+export const MainContent = styled.div`
+  div + div + div {
+    border-top: 1px solid #e5e5e5;
+  }
+`;
 
 export const PhotoPreview = styled.div<RoomProps>`
   position: relative;
@@ -128,6 +132,57 @@ export const PhotoPreview = styled.div<RoomProps>`
   }
 `;
 
-export const Host = styled.div``;
+export const Host = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 30px 0;
+
+  > div {
+    h5 {
+      margin-bottom: 5px;
+      color: ${colors.darkGrey};
+      font-size: 1.2em;
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.6em;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 2em;
+      }
+    }
+
+    span {
+      color: ${colors.middleGray};
+      font-size: 0.7em;
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1em;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 1000px;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+`;
 
 export const Description = styled.div``;
