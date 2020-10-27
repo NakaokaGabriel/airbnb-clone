@@ -40,7 +40,23 @@ export const Title = styled.div`
   }
 `;
 
-export const RowContent = styled.div``;
+export const RowContent = styled.div`
+  @media screen and (min-width: 968px) {
+    display: flex;
+  }
+
+  > div {
+    flex: 1;
+
+    & + div {
+      margin-left: 30px;
+    }
+  }
+
+  div:first-child {
+    flex: 2;
+  }
+`;
 
 export const MainContent = styled.div``;
 
