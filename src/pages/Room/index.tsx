@@ -1,5 +1,5 @@
-import React from 'react';
-import { RiLayoutGridFill, RiStarFill } from 'react-icons/ri';
+import React, { useState, useCallback } from 'react';
+import { RiGridFill, RiStarFill } from 'react-icons/ri';
 
 import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
@@ -10,7 +10,7 @@ import {
   Title,
   RowContent,
   MainContent,
-  Location,
+  PhotoPreview,
   Host,
   Description,
 } from './styles';
@@ -18,6 +18,8 @@ import {
 import Availability from './Availability';
 
 const Room: React.FC = () => {
+  const [photoTooltip, setPhotoTooltip] = useState<boolean>(false);
+
   return (
     <>
       <Navigation />
@@ -36,19 +38,24 @@ const Room: React.FC = () => {
           </Title>
           <RowContent>
             <MainContent>
-              <Location>
+              <PhotoPreview photoTooltip={photoTooltip}>
                 <img
                   src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
                   alt="bangalo"
                 />
 
                 <div className="all-images">
-                  <button type="button">
-                    <RiLayoutGridFill />
+                  <button
+                    type="button"
+                    onMouseOut={() => setPhotoTooltip(true)}
+                    onBlur={() => setPhotoTooltip(false)}
+                    onMouseLeave={() => setPhotoTooltip(false)}
+                  >
+                    <RiGridFill />
                   </button>
                   <span>Mostrar todas fotos</span>
                 </div>
-              </Location>
+              </PhotoPreview>
 
               <Host>
                 <div>
