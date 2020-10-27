@@ -38,10 +38,9 @@ const Availability: React.FC = () => {
       </Header>
       <Form autoComplete="off">
         <div className="form-input">
-          <label htmlFor="checkin">
+          <label>
             CHECK-IN
             <Calendar
-              id="checkin"
               selected={checkinDate}
               onChange={(date: Date) => toggleCheckinDate(date)}
               placeholderText="Insira a data"
@@ -54,10 +53,9 @@ const Availability: React.FC = () => {
         </div>
 
         <div className="form-input">
-          <label htmlFor="checkout">
+          <label>
             CHECKOUT
             <Calendar
-              id="checkout"
               selected={checkoutDate}
               onChange={(date: Date) => toggleCheckoutDate(date)}
               placeholderText="Insira a data"
@@ -70,13 +68,9 @@ const Availability: React.FC = () => {
         </div>
 
         <div className="form-input">
-          <label htmlFor="guests">
+          <label>
             HOSPÉDES
-            <input
-              type="text"
-              id="guests"
-              placeholder="Insira o numéro de hospedes"
-            />
+            <input type="text" placeholder="Insira o numéro de hospedes" />
           </label>
         </div>
 
