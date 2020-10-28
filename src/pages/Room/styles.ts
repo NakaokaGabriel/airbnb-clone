@@ -68,6 +68,12 @@ export const MainContent = styled.div`
   > div + div + div {
     border-top: 1px solid #e5e5e5;
   }
+
+  @media screen and (max-width: 968px) {
+    div:last-child {
+      margin-bottom: 30px;
+    }
+  }
 `;
 
 export const PhotoPreview = styled.div<RoomProps>`

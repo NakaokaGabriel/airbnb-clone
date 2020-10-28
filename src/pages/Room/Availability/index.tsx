@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useLayoutEffect } from 'react';
 import { isBefore } from 'date-fns';
+import { RiStarFill } from 'react-icons/ri';
 
 import { Container, Header, Form } from './styles';
 
@@ -35,8 +36,11 @@ const Availability: React.FC = () => {
           <strong>R$128</strong>
           /Dia
         </span>
+        <div className="stars">
+          <RiStarFill /> <strong>4,98</strong> (4)
+        </div>
       </Header>
-      <Form autoComplete="off">
+      <Form>
         <div className="form-input">
           <label>
             CHECK-IN
@@ -75,9 +79,7 @@ const Availability: React.FC = () => {
         </div>
 
         <div className="form-input">
-          <button type="submit">
-            <span>Conferir disponibilidade</span>
-          </button>
+          <button type="submit">Conferir disponibilidade</button>
         </div>
       </Form>
     </Container>
