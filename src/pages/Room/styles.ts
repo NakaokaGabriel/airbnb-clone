@@ -65,7 +65,7 @@ export const RowContent = styled.div`
 `;
 
 export const MainContent = styled.div`
-  div + div + div {
+  > div + div + div {
     border-top: 1px solid #e5e5e5;
   }
 `;
@@ -185,4 +185,30 @@ export const Host = styled.div`
   }
 `;
 
-export const Description = styled.div``;
+export const Description = styled.div`
+  padding: 30px 0;
+
+  h3,
+  h4 {
+    color: ${colors.darkGrey};
+  }
+
+  @media screen and (min-width: 1024px) {
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+  }
+
+  div + div {
+    margin-top: 10px;
+  }
+
+  p {
+    color: ${colors.middleGray};
+    margin-top: 5px;
+  }
+`;
