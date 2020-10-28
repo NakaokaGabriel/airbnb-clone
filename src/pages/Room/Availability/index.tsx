@@ -2,8 +2,11 @@ import React, { useState, useCallback, useLayoutEffect } from 'react';
 import { isBefore } from 'date-fns';
 import { RiStarFill } from 'react-icons/ri';
 
-import { Container, Header, Form } from './styles';
+import {
+ Container, Header, Form, AvailableDate
+} from './styles';
 
+import Input from '../../../components/Input';
 import Calendar from '../../../components/Calendar';
 
 const Availability: React.FC = () => {
@@ -41,42 +44,44 @@ const Availability: React.FC = () => {
         </div>
       </Header>
       <Form>
-        <div className="form-input">
-          <label>
-            CHECK-IN
-            <Calendar
-              selected={checkinDate}
-              onChange={(date: Date) => toggleCheckinDate(date)}
-              placeholderText="Insira a data"
-              minDate={new Date()}
-              open={openCheckinDate}
-              onInputClick={() => setOpenCheckinDate(true)}
-              onClickOutside={() => setOpenCheckinDate(false)}
-            />
-          </label>
-        </div>
+        <AvailableDate>
+          <Input>
+            <label>
+              CHECK-IN
+              <Calendar
+                selected={checkinDate}
+                onChange={(date: Date) => toggleCheckinDate(date)}
+                placeholderText="Insira a data"
+                minDate={new Date()}
+                open={openCheckinDate}
+                onInputClick={() => setOpenCheckinDate(true)}
+                onClickOutside={() => setOpenCheckinDate(false)}
+              />
+            </label>
+          </Input>
 
-        <div className="form-input">
-          <label>
-            CHECKOUT
-            <Calendar
-              selected={checkoutDate}
-              onChange={(date: Date) => toggleCheckoutDate(date)}
-              placeholderText="Insira a data"
-              minDate={checkinDate || new Date()}
-              open={openCheckoutDate}
-              onInputClick={() => setOpenCheckoutDate(true)}
-              onClickOutside={() => setOpenCheckoutDate(false)}
-            />
-          </label>
-        </div>
+          <Input>
+            <label>
+              CHECKOUT
+              <Calendar
+                selected={checkoutDate}
+                onChange={(date: Date) => toggleCheckoutDate(date)}
+                placeholderText="Insira a data"
+                minDate={checkinDate || new Date()}
+                open={openCheckoutDate}
+                onInputClick={() => setOpenCheckoutDate(true)}
+                onClickOutside={() => setOpenCheckoutDate(false)}
+              />
+            </label>
+          </Input>
+        </AvailableDate>
 
-        <div className="form-input">
+        <Input>
           <label>
             HOSPÉDES
             <input type="text" placeholder="Insira o numéro de hospedes" />
           </label>
-        </div>
+        </Input>
 
         <div className="form-input">
           <button type="submit">Conferir disponibilidade</button>

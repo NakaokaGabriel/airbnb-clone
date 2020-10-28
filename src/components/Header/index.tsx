@@ -4,6 +4,7 @@ import { isBefore } from 'date-fns';
 
 import { Container, Search, Form } from './styles';
 
+import Input from '../Input';
 import Calendar from '../Calendar';
 
 const Header: React.FC = () => {
@@ -56,7 +57,7 @@ const Header: React.FC = () => {
         </button>
 
         <Form searchMenu={toggleSearchMenu} autoComplete="off">
-          <div className="form-input">
+          <Input>
             <label htmlFor="localization">
               LOCALIZAÇÃO
               <input
@@ -65,9 +66,9 @@ const Header: React.FC = () => {
                 placeholder="Para onde você vai ?"
               />
             </label>
-          </div>
+          </Input>
 
-          <div className="form-input">
+          <Input>
             <label htmlFor="checkin">
               CHECK-IN
               <Calendar
@@ -81,9 +82,9 @@ const Header: React.FC = () => {
                 onClickOutside={() => setOpenCheckinDate(false)}
               />
             </label>
-          </div>
+          </Input>
 
-          <div className="form-input">
+          <Input>
             <label htmlFor="checkout">
               CHECKOUT
               <Calendar
@@ -97,9 +98,9 @@ const Header: React.FC = () => {
                 onClickOutside={() => setOpenCheckoutDate(false)}
               />
             </label>
-          </div>
+          </Input>
 
-          <div className="form-input">
+          <Input>
             <label htmlFor="guests">
               HOSPÉDES
               <input
@@ -108,7 +109,7 @@ const Header: React.FC = () => {
                 placeholder="Insira o numéro de hospedes"
               />
             </label>
-          </div>
+          </Input>
 
           <div className="form-input">
             <button type="submit">

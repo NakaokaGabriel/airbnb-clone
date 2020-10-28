@@ -57,7 +57,7 @@ export const Header = styled.div`
     }
   }
 
-  @media screen and (min-width: 968px) {
+  @media screen and (min-width: 969px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,20 +99,48 @@ export const Header = styled.div`
 
 export const Form = styled.form`
   @media screen and (max-width: 968px) {
-    .form-input {
-      label {
-        display: none;
-      }
+    label {
+      display: none;
+    }
 
-      button {
-        background: #fff;
-        color: ${colors.red};
-        border: none;
-        border-radius: 6px;
-        padding: 10px;
-        font-size: 0.9em;
-        font-weight: bold;
-      }
+    button {
+      background: #fff;
+      color: ${colors.red};
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+  }
+
+  @media screen and (min-width: 969px) {
+    div {
+      margin-left: 0;
+    }
+
+    button {
+      width: 100%;
+      background: ${colors.red};
+      color: ${colors.background};
+      border: none;
+      border-radius: 6px;
+      padding: 15px 0;
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+`;
+
+export const AvailableDate = styled.div`
+  @media screen and (min-width: 969px) {
+    display: flex;
+    margin: 20px 0;
+
+    > div + div {
+      margin-left: 10px;
+      margin-top: 0;
     }
   }
 `;
