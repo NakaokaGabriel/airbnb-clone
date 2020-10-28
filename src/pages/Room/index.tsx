@@ -69,38 +69,44 @@ const Room: React.FC = () => {
               </Host>
 
               <Description>
-                <h3>Descrição</h3>
+                <div>
+                  <h3>Descrição</h3>
 
-                <p>
-                  Acomodação em casa estilo rústico com fácil acesso a praias,
-                  ciclovias, farmácias, comércios e mercados. Uma casa simples
-                  mas que oferece muito conforto e conveniência.
-                </p>
+                  <p>
+                    Acomodação em casa estilo rústico com fácil acesso a praias,
+                    ciclovias, farmácias, comércios e mercados. Uma casa simples
+                    mas que oferece muito conforto e conveniência.
+                  </p>
+                </div>
 
-                <strong>O espaço</strong>
+                <div>
+                  <h4>O espaço</h4>
 
-                <p>
-                  Todos os ambientes internos são privativos, possui cozinha
-                  completa e ventiladores no quarto e sala. A casa dispõe de
-                  Wifi.
-                </p>
+                  <p>
+                    Todos os ambientes internos são privativos, possui cozinha
+                    completa e ventiladores no quarto e sala. A casa dispõe de
+                    Wifi.
+                  </p>
 
-                <p>
-                  Casa faz parte de um pequeno condomínio de moradores, portanto
-                  é importante respeitar as regras de silêncio após as 22h e não
-                  é permitido festas e eventos no local.
-                </p>
+                  <p>
+                    Casa faz parte de um pequeno condomínio de moradores,
+                    portanto é importante respeitar as regras de silêncio após
+                    as 22h e não é permitido festas e eventos no local.
+                  </p>
 
-                <p>
-                  Não é permitido levar animais e fumar no interior da casa.
-                </p>
+                  <p>
+                    Não é permitido levar animais e fumar no interior da casa.
+                  </p>
+                </div>
 
-                <strong>Acesso do hóspede</strong>
+                <div>
+                  <h4>Acesso do hóspede</h4>
 
-                <p>
-                  A casa fica no 1° andar, com acesso apenas por escadas. A casa
-                  não é indicada para pessoas com mobilidade reduzida.
-                </p>
+                  <p>
+                    A casa fica no 1° andar, com acesso apenas por escadas. A
+                    casa não é indicada para pessoas com mobilidade reduzida.
+                  </p>
+                </div>
               </Description>
             </MainContent>
 
