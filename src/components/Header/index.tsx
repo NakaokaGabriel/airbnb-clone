@@ -6,6 +6,7 @@ import { Container, Search, Form } from './styles';
 
 import Input from '../Input';
 import Calendar from '../Calendar';
+import Guest from '../Guest';
 
 const Header: React.FC = () => {
   const [toggleSearchMenu, setToggleSearchMenu] = useState<boolean>(false);
@@ -108,6 +109,7 @@ const Header: React.FC = () => {
                 id="guests"
                 placeholder="Insira o numéro de hospedes"
               />
+              <Guest />
             </label>
           </Input>
 
