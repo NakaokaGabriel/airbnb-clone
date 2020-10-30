@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useLayoutEffect, useRef, useCallback } from 'react';
 
 import { Wrapper, Row, GuestType, GuestNumber } from './styles';
 
-const Guest: React.FC = () => {
+interface Props {
+  guest: boolean;
+}
+
+const Guest: React.FC<Props> = ({ guest }) => {
+  const guestRef = useRef(null);
+
+  const [toggleGuest, setToggleGuest] = useState<boolean>(true);
+
+  useLayoutEffect(() => {
+    setToggleGuest(guest);
+  }, [guest]);
+
   return (
-    <Wrapper>
+    <Wrapper ref={guestRef} toggleGuest={toggleGuest}>
       <Row>
         <GuestType>
           <strong>Adultos</strong>

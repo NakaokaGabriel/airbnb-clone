@@ -16,6 +16,8 @@ const Header: React.FC = () => {
   const [checkoutDate, setCheckoutDate] = useState<Date | null>(null);
   const [openCheckoutDate, setOpenCheckoutDate] = useState<boolean>(false);
 
+  const [guest, setGuest] = useState(false);
+
   const toggleSearchMenuVisibility = useCallback(() => {
     setToggleSearchMenu(!toggleSearchMenu);
   }, [toggleSearchMenu]);
@@ -108,8 +110,9 @@ const Header: React.FC = () => {
                 type="text"
                 id="guests"
                 placeholder="Insira o numéro de hospedes"
+                onFocus={() => setGuest(true)}
               />
-              <Guest />
+              <Guest guest={guest} />
             </label>
           </Input>
 

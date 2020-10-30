@@ -2,7 +2,12 @@ import styled from 'styled-components';
 
 import { colors } from '../../styles/colors';
 
-export const Wrapper = styled.div`
+interface GuestProps {
+  toggleGuest: boolean;
+}
+
+export const Wrapper = styled.div<GuestProps>`
+  display: ${(props) => (props.toggleGuest ? 'block' : 'none')};
   background: #fff;
   width: 100%;
   position: absolute;
