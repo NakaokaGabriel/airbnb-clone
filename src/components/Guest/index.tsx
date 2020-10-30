@@ -8,7 +8,29 @@ const Guest: React.FC = () => {
       <Row>
         <GuestType>
           <strong>Adultos</strong>
-          <span>13 anos ou mais</span>
+          <span>Maior de 13</span>
+        </GuestType>
+        <GuestNumber>
+          <button type="button">-</button>
+          <span>0</span>
+          <button type="button">+</button>
+        </GuestNumber>
+      </Row>
+      <Row>
+        <GuestType>
+          <strong>Crianças</strong>
+          <span>Idade 2 - 12</span>
+        </GuestType>
+        <GuestNumber>
+          <button type="button">-</button>
+          <span>0</span>
+          <button type="button">+</button>
+        </GuestNumber>
+      </Row>
+      <Row>
+        <GuestType>
+          <strong>Bebês</strong>
+          <span>Menor de 2</span>
         </GuestType>
         <GuestNumber>
           <button type="button">-</button>
