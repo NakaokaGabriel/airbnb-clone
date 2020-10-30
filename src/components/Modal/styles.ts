@@ -1,22 +1,26 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+import { colors } from '../../styles/colors';
+
+interface ModalProps {
+  modal: boolean;
+}
+
+export const Wrapper = styled.div<ModalProps>`
   position: fixed;
-  top: 0;
+  top: ${(props) => (props.modal ? '0%' : '100%')};
+  transition: top 0.5s;
   z-index: 999;
   background: #fff;
   height: 100vh;
   width: 100%;
   padding: 0 10px;
-  overflow-y: scroll;
 `;
 
 export const Header = styled.div`
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
 
   button {
     border: none;
@@ -27,12 +31,15 @@ export const Header = styled.div`
     svg {
       width: 30px;
       height: 30px;
+      color: ${colors.darkGrey};
     }
   }
 `;
 
 export const ListContent = styled.div`
-  margin-top: 100px;
+  overflow-y: scroll;
+  height: 91vh;
+  padding: 20px;
 
   img {
     border-radius: 6px;
@@ -62,4 +69,10 @@ export const ListContent = styled.div`
   @media screen and (min-width: 1440px) {
     grid-template-columns: repeat(4, 1fr);
   }
+`;
+
+export const Title = styled.h5`
+  color: ${colors.darkGrey};
+  font-size: 1.4em;
+  margin-left: 20px;
 `;

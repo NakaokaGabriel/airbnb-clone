@@ -37,6 +37,7 @@
     "no-use-before-define": "off",
     "arrow-body-style": "off",
     "react/prop-types": "off",
+    "object-curly-newline": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/label-has-associated-control": "off",
