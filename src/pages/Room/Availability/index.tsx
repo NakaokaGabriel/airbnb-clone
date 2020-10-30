@@ -2,9 +2,7 @@ import React, { useState, useCallback, useLayoutEffect } from 'react';
 import { isBefore } from 'date-fns';
 import { RiStarFill } from 'react-icons/ri';
 
-import {
- Container, Header, Form, AvailableDate
-} from './styles';
+import { Container, Header, Form, AvailableDate } from './styles';
 
 import Input from '../../../components/Input';
 import Calendar from '../../../components/Calendar';

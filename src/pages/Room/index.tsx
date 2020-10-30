@@ -4,6 +4,7 @@ import { RiGridFill, RiStarFill } from 'react-icons/ri';
 import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
 import Container from '../../components/Container';
+import Modal from '../../components/Modal';
 
 import {
   Content,
@@ -114,6 +115,16 @@ const Room: React.FC = () => {
           </RowContent>
         </Content>
       </Container>
+      <Modal>
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
+      </Modal>
     </>
   );
 };
