@@ -124,6 +124,26 @@ const Room: React.FC = () => {
           src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
           alt="bangalo"
         />
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
+        <img
+          src="https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg?aki_policy=xx_large"
+          alt="bangalo"
+        />
       </Modal>
     </>
   );
