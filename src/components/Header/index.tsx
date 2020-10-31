@@ -111,6 +111,7 @@ const Header: React.FC = () => {
                 id="guests"
                 placeholder="Insira o numéro de hospedes"
                 onFocus={() => setGuest(true)}
+                onClick={() => setGuest(true)}
               />
               <Guest guest={guest} setGuest={setGuest} />
             </label>
