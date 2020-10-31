@@ -6,46 +6,18 @@ import arrowLeft from '../../assets/arrow-point-to-left.svg';
 import arrowRight from '../../assets/arrow-point-to-right.svg';
 
 export const Container = styled.div`
-  .react-datepicker__navigation--previous,
-  .react-datepicker__navigation--next {
-    top: 25px;
-  }
-
-  .react-datepicker__day--outside-month {
-    opacity: 0.2;
-  }
-
-  .react-datepicker__navigation--previous {
-    background: url(${arrowLeft}) no-repeat 45% center;
-    background-size: 10px;
-    background-color: ${colors.darkGrey};
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-  }
-
-  .react-datepicker__navigation--next {
-    background: url(${arrowRight}) no-repeat 58% center;
-    background-size: 10px;
-    background-color: ${colors.darkGrey};
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-  }
-
   .react-datepicker-popper {
-    transform: translate3d(0, 49px, 0px) !important;
+    width: 100%;
+    border-radius: 6px;
+    background: #fff;
   }
 
   .react-datepicker {
-    border: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(164, 164, 164, 0.5);
     padding: 20px;
     font-family: 'Roboto';
+    width: 100%;
 
     .react-datepicker__triangle {
       display: none;
@@ -67,6 +39,10 @@ export const Container = styled.div`
           text-transform: uppercase;
         }
       }
+    }
+
+    .react-datepicker__month-container {
+      float: unset;
     }
 
     .react-datepicker__month {
@@ -144,5 +120,40 @@ export const Container = styled.div`
         border-radius: 50%;
       }
     }
+  }
+
+  .react-datepicker__navigation--previous,
+  .react-datepicker__navigation--next {
+    top: 25px;
+  }
+
+  .react-datepicker__day--outside-month {
+    opacity: 0.2;
+  }
+
+  .react-datepicker__navigation--previous {
+    background: url(${arrowLeft}) no-repeat 45% center;
+    background-size: 10px;
+    background-color: ${colors.darkGrey};
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  .react-datepicker__navigation--next {
+    background: url(${arrowRight}) no-repeat 58% center;
+    background-size: 10px;
+    background-color: ${colors.darkGrey};
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  .react-datepicker-popper {
+    transform: translate3d(0, 49px, 0px) !important;
   }
 `;

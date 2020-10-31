@@ -137,6 +137,11 @@ export const AvailableDate = styled.div`
   @media screen and (min-width: 969px) {
     display: flex;
     margin: 20px 0;
+    position: relative;
+
+    div {
+      position: unset;
+    }
 
     > div + div {
       margin-left: 10px;
