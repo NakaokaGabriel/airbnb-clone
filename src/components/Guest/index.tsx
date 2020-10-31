@@ -1,22 +1,34 @@
-import React, { useState, useLayoutEffect, useRef, useCallback } from 'react';
+import React, { useLayoutEffect, useRef, useCallback } from 'react';
 
 import { Wrapper, Row, GuestType, GuestNumber } from './styles';
 
 interface Props {
   guest: boolean;
+  setGuest: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Guest: React.FC<Props> = ({ guest }) => {
-  const guestRef = useRef(null);
+const Guest: React.FC<Props> = ({ guest, setGuest }) => {
+  const guestRef = useRef<HTMLDivElement>(null);
 
-  const [toggleGuest, setToggleGuest] = useState<boolean>(true);
+  const handleOutsideClick = useCallback(
+    (event) => {
+      if (!guestRef.current?.contains(event.target)) {
+        setGuest(false);
+      }
+    },
+    [setGuest],
+  );
 
   useLayoutEffect(() => {
-    setToggleGuest(guest);
-  }, [guest]);
+    document.addEventListener('mousedown', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [handleOutsideClick]);
 
   return (
-    <Wrapper ref={guestRef} toggleGuest={toggleGuest}>
+    <Wrapper ref={guestRef} toggleGuest={guest}>
       <Row>
         <GuestType>
           <strong>Adultos</strong>
