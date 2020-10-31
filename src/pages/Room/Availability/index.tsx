@@ -44,9 +44,10 @@ const Availability: React.FC = () => {
       <Form>
         <AvailableDate>
           <Input>
-            <label>
+            <label htmlFor="availability-checkin">
               CHECK-IN
               <Calendar
+                id="availability-checkin"
                 selected={checkinDate}
                 onChange={(date: Date) => toggleCheckinDate(date)}
                 placeholderText="Insira a data"
@@ -59,9 +60,10 @@ const Availability: React.FC = () => {
           </Input>
 
           <Input>
-            <label>
+            <label htmlFor="availability-checkout">
               CHECKOUT
               <Calendar
+                id="availability-checkout"
                 selected={checkoutDate}
                 onChange={(date: Date) => toggleCheckoutDate(date)}
                 placeholderText="Insira a data"
