@@ -3,12 +3,15 @@ import { BrowserRouter } from 'react-router-dom';
 
 import GlobalStyles from './styles/global';
 import Routes from './routes';
+import GuestCountProvider from './context/GuestCount';
 
 const App: React.FC = () => (
-  <BrowserRouter>
-    <Routes />
-    <GlobalStyles />
-  </BrowserRouter>
+  <GuestCountProvider>
+    <BrowserRouter>
+      <Routes />
+      <GlobalStyles />
+    </BrowserRouter>
+  </GuestCountProvider>
 );
 
 export default App;
