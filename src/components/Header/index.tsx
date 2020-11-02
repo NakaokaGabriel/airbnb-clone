@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { isBefore } from 'date-fns';
 
 import { Container, Search, Form } from './styles';
-import { useGuestCount } from '../../hooks/useGuestCount';
+// import { useGuestCount } from '../../hooks/useGuestCount';
 
 import Input from '../Input';
 import Calendar from '../Calendar';
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
     }
   }, [checkinDate, checkoutDate, openCheckoutDate]);
 
-  const { guestCount } = useGuestCount();
+  // const { guestCount } = useGuestCount();
 
   return (
     <Container>
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
                 placeholder="Insira o numéro de hospedes"
                 onFocus={() => setGuest(true)}
                 onClick={() => setGuest(true)}
-                // value={guestCount}
+                // value={guestCount > 0 ? guestCount : undefined}
               />
               <Guest guest={guest} setGuest={setGuest} />
             </label>

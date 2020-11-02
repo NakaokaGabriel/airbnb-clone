@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useCallback } from 'react';
+import React, { useLayoutEffect, useRef, useCallback, useMemo } from 'react';
 
 import { Wrapper, Row, GuestType, GuestNumber } from './styles';
 import { useGuestCount } from '../../hooks/useGuestCount';
@@ -10,6 +10,7 @@ interface Props {
 
 const Guest: React.FC<Props> = ({ guest, setGuest }) => {
   const {
+    guestCount,
     setGuestCount,
     adultCount,
     setAdultCount,
@@ -39,6 +40,10 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
     };
   }, [handleOutsideClick]);
 
+  const totalGuest = useMemo(() => {
+    return guestCount < totalGuestCount;
+  }, [guestCount, totalGuestCount]);
+
   const toggleAdultSub = useCallback(() => {
     if (adultCount > 0) {
       setAdultCount(adultCount - 1);
@@ -46,10 +51,10 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
   }, [adultCount, setAdultCount]);
 
   const toggleAdultAdd = useCallback(() => {
-    if (adultCount < totalGuestCount) {
+    if (totalGuest) {
       setAdultCount(adultCount + 1);
     }
-  }, [adultCount, setAdultCount, totalGuestCount]);
+  }, [adultCount, setAdultCount, totalGuest]);
 
   const toggleKidSub = useCallback(() => {
     if (kidCount > 0) {
@@ -58,10 +63,10 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
   }, [kidCount, setKidCount]);
 
   const toggleKidAdd = useCallback(() => {
-    if (kidCount < totalGuestCount) {
+    if (totalGuest) {
       setKidCount(kidCount + 1);
     }
-  }, [kidCount, setKidCount, totalGuestCount]);
+  }, [kidCount, setKidCount, totalGuest]);
 
   const toggleBabySub = useCallback(() => {
     if (babyCount > 0) {
@@ -70,10 +75,14 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
   }, [babyCount, setBabyCount]);
 
   const toggleBabyAdd = useCallback(() => {
-    if (babyCount < totalGuestCount) {
+    if (totalGuest) {
       setBabyCount(babyCount + 1);
     }
-  }, [babyCount, setBabyCount, totalGuestCount]);
+  }, [babyCount, setBabyCount, totalGuest]);
+
+  useLayoutEffect(() => {
+    setGuestCount(adultCount + kidCount + babyCount);
+  }, [adultCount, kidCount, babyCount, setGuestCount]);
 
   return (
     <Wrapper ref={guestRef} toggleGuest={guest}>
