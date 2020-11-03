@@ -92,13 +92,17 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
           <span>Maior de 13</span>
         </GuestType>
         <GuestNumber>
-          <button type="button" onClick={toggleAdultSub}>
-            -
-          </button>
+          {adultCount > 0 && (
+            <button type="button" onClick={toggleAdultSub}>
+              -
+            </button>
+          )}
           <span>{adultCount}</span>
-          <button type="button" onClick={toggleAdultAdd}>
-            +
-          </button>
+          {totalGuest && (
+            <button type="button" onClick={toggleAdultAdd}>
+              +
+            </button>
+          )}
         </GuestNumber>
       </Row>
       <Row>
@@ -107,13 +111,17 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
           <span>Idade 2 - 12</span>
         </GuestType>
         <GuestNumber>
-          <button type="button" onClick={toggleKidSub}>
-            -
-          </button>
+          {kidCount > 0 && (
+            <button type="button" onClick={toggleKidSub}>
+              -
+            </button>
+          )}
           <span>{kidCount}</span>
-          <button type="button" onClick={toggleKidAdd}>
-            +
-          </button>
+          {totalGuest && (
+            <button type="button" onClick={toggleKidAdd}>
+              +
+            </button>
+          )}
         </GuestNumber>
       </Row>
       <Row>
@@ -122,13 +130,17 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
           <span>Menor de 2</span>
         </GuestType>
         <GuestNumber>
-          <button type="button" onClick={toggleBabySub}>
-            -
-          </button>
+          {babyCount > 0 && (
+            <button type="button" onClick={toggleBabySub}>
+              -
+            </button>
+          )}
           <span>{babyCount}</span>
-          <button type="button" onClick={toggleBabyAdd}>
-            +
-          </button>
+          {totalGuest && (
+            <button type="button" onClick={toggleBabyAdd}>
+              +
+            </button>
+          )}
         </GuestNumber>
       </Row>
     </Wrapper>
