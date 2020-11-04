@@ -63,7 +63,7 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
   }, [kidCount, setKidCount]);
 
   const toggleKidAdd = useCallback(() => {
-    if (totalGuest) {
+    if (totalGuest && kidCount < 6) {
       setKidCount(kidCount + 1);
     }
   }, [kidCount, setKidCount, totalGuest]);
@@ -75,7 +75,7 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
   }, [babyCount, setBabyCount]);
 
   const toggleBabyAdd = useCallback(() => {
-    if (totalGuest) {
+    if (totalGuest && babyCount < 4) {
       setBabyCount(babyCount + 1);
     }
   }, [babyCount, setBabyCount, totalGuest]);
@@ -117,7 +117,7 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
             </button>
           )}
           <span>{kidCount}</span>
-          {totalGuest && (
+          {totalGuest && kidCount < 6 && (
             <button type="button" onClick={toggleKidAdd}>
               +
             </button>
@@ -136,7 +136,7 @@ const Guest: React.FC<Props> = ({ guest, setGuest }) => {
             </button>
           )}
           <span>{babyCount}</span>
-          {totalGuest && (
+          {totalGuest && babyCount < 4 && (
             <button type="button" onClick={toggleBabyAdd}>
               +
             </button>
