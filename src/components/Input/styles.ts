@@ -71,7 +71,7 @@ export const Container = styled.div`
     }
 
     @media screen and (min-width: 1024px) {
-      span {
+      > span {
         display: none;
       }
     }

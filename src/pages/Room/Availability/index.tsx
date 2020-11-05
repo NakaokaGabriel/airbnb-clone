@@ -6,12 +6,15 @@ import { Container, Header, Form, AvailableDate } from './styles';
 
 import Input from '../../../components/Input';
 import Calendar from '../../../components/Calendar';
+import Guest from '../../../components/Guest';
 
 const Availability: React.FC = () => {
   const [checkinDate, setCheckinDate] = useState<Date | null>(null);
   const [openCheckinDate, setOpenCheckinDate] = useState<boolean>(false);
   const [checkoutDate, setCheckoutDate] = useState<Date | null>(null);
   const [openCheckoutDate, setOpenCheckoutDate] = useState<boolean>(false);
+
+  const [guest, setGuest] = useState(false);
 
   const toggleCheckinDate = useCallback((date) => {
     setCheckinDate(date);
@@ -79,7 +82,13 @@ const Availability: React.FC = () => {
         <Input>
           <label>
             HOSPÉDES
-            <input type="text" placeholder="Insira o numéro de hospedes" />
+            <input
+              type="text"
+              placeholder="Insira o numéro de hospedes"
+              onFocus={() => setGuest(true)}
+              onClick={() => setGuest(true)}
+            />
+            <Guest guest={guest} setGuest={setGuest} />
           </label>
         </Input>
 
