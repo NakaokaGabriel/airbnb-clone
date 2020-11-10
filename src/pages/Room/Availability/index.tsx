@@ -16,6 +16,11 @@ const Availability: React.FC = () => {
 
   const [guest, setGuest] = useState(false);
 
+  const [guestCount, setGuestCount] = useState(0);
+  const [adultCount, setAdultCount] = useState(0);
+  const [kidCount, setKidCount] = useState(0);
+  const [babyCount, setBabyCount] = useState(0);
+
   const toggleCheckinDate = useCallback((date) => {
     setCheckinDate(date);
   }, []);
@@ -88,7 +93,18 @@ const Availability: React.FC = () => {
               onFocus={() => setGuest(true)}
               onClick={() => setGuest(true)}
             />
-            <Guest guest={guest} setGuest={setGuest} />
+            <Guest
+              guest={guest}
+              setGuest={setGuest}
+              guestCount={guestCount}
+              setGuestCount={setGuestCount}
+              adultCount={adultCount}
+              setAdultCount={setAdultCount}
+              kidCount={kidCount}
+              setKidCount={setKidCount}
+              babyCount={babyCount}
+              setBabyCount={setBabyCount}
+            />
           </label>
         </Input>
 

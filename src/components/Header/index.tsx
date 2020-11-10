@@ -3,7 +3,6 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { isBefore } from 'date-fns';
 
 import { Container, Search, Form } from './styles';
-// import { useGuestCount } from '../../hooks/useGuestCount';
 
 import Input from '../Input';
 import Calendar from '../Calendar';
@@ -18,6 +17,12 @@ const Header: React.FC = () => {
   const [openCheckoutDate, setOpenCheckoutDate] = useState<boolean>(false);
 
   const [guest, setGuest] = useState<boolean>(false);
+
+  const [guestCount, setGuestCount] = useState(0);
+
+  const [adultCount, setAdultCount] = useState(0);
+  const [kidCount, setKidCount] = useState(0);
+  const [babyCount, setBabyCount] = useState(0);
 
   const toggleSearchMenuVisibility = useCallback(() => {
     setToggleSearchMenu(!toggleSearchMenu);
@@ -39,8 +44,6 @@ const Header: React.FC = () => {
       setCheckoutDate(validateCheckout);
     }
   }, [checkinDate, checkoutDate, openCheckoutDate]);
-
-  // const { guestCount } = useGuestCount();
 
   return (
     <Container>
@@ -115,9 +118,19 @@ const Header: React.FC = () => {
                 placeholder="Insira o numéro de hospedes"
                 onFocus={() => setGuest(true)}
                 onClick={() => setGuest(true)}
-                // value={guestCount > 0 ? guestCount : undefined}
               />
-              <Guest guest={guest} setGuest={setGuest} />
+              <Guest
+                guest={guest}
+                setGuest={setGuest}
+                guestCount={guestCount}
+                setGuestCount={setGuestCount}
+                adultCount={adultCount}
+                setAdultCount={setAdultCount}
+                kidCount={kidCount}
+                setKidCount={setKidCount}
+                babyCount={babyCount}
+                setBabyCount={setBabyCount}
+              />
             </label>
           </Input>
 
