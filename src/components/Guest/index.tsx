@@ -6,20 +6,37 @@ import { useGuestCount } from '../../hooks/useGuestCount';
 interface Props {
   guest: boolean;
   setGuest: React.Dispatch<React.SetStateAction<boolean>>;
+
+  guestCount: number;
+  setGuestCount: React.Dispatch<React.SetStateAction<number>>;
+
+  adultCount: number;
+  setAdultCount: React.Dispatch<React.SetStateAction<number>>;
+
+  kidCount: number;
+  setKidCount: React.Dispatch<React.SetStateAction<number>>;
+
+  babyCount: number;
+  setBabyCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Guest: React.FC<Props> = ({ guest, setGuest }) => {
-  const {
-    guestCount,
-    setGuestCount,
-    adultCount,
-    setAdultCount,
-    kidCount,
-    setKidCount,
-    babyCount,
-    setBabyCount,
-    totalGuestCount,
-  } = useGuestCount();
+const Guest: React.FC<Props> = ({
+  guest,
+  setGuest,
+
+  guestCount,
+  setGuestCount,
+
+  adultCount,
+  setAdultCount,
+
+  kidCount,
+  setKidCount,
+
+  babyCount,
+  setBabyCount,
+}) => {
+  const { totalGuestCount } = useGuestCount();
 
   const guestRef = useRef<HTMLDivElement>(null);
 
